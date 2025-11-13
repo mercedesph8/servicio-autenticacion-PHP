@@ -1,0 +1,178 @@
+/* ==========================================
+   PLANTILLA CSS PERSONAL
+   Proyecto: Sistema de Autenticación
+   Paleta: Morado Moderno Minimalista
+   ========================================== */
+
+/* ========== 1. VARIABLES (tu paleta reutilizable) ========== */
+:root {
+    /* Colores principales */
+    --color-primario: #6c5ce7;
+    --color-secundario: #fd79a8;
+    --color-exito: #00b894;
+    --color-error: #d63031;
+    
+    /* Colores neutros */
+    --color-fondo: #f8f9fa;
+    --color-blanco: #ffffff;
+    --color-texto: #2d3436;
+    --color-texto-claro: #636e72;
+    
+    /* Sombras */
+    --sombra-suave: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --sombra-media: 0 4px 20px rgba(108, 92, 231, 0.15);
+    
+    /* Espaciados */
+    --espaciado-pequeno: 10px;
+    --espaciado-medio: 20px;
+    --espaciado-grande: 40px;
+    
+    /* Bordes */
+    --radio-borde: 12px;
+}
+
+/* ========== 2. RESET Y ESTILOS GLOBALES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-texto);
+}
+
+/* ========== 3. CONTENEDOR PRINCIPAL ========== */
+.contenedor {
+    width: 100%;
+    max-width: 450px;
+    padding: var(--espaciado-medio);
+}
+
+/* ========== 4. CAJAS (componente reutilizable) ========== */
+.caja-login,
+.caja-bienvenida,
+.caja-permisos {
+    background: var(--color-blanco);
+    padding: var(--espaciado-grande);
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-media);
+}
+
+/* ========== 5. TIPOGRAFÍA ========== */
+h1 {
+    color: var(--color-primario);
+    font-size: 28px;
+    margin-bottom: var(--espaciado-medio);
+    text-align: center;
+}
+
+p {
+    color: var(--color-texto-claro);
+    line-height: 1.6;
+    margin-bottom: var(--espaciado-pequeno);
+}
+
+/* ========== 6. FORMULARIOS ========== */
+.campo {
+    margin-bottom: var(--espaciado-medio);
+}
+
+label {
+    display: block;
+    color: var(--color-texto);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: var(--color-primario);
+}
+
+/* ========== 7. BOTONES (componente reutilizable) ========== */
+button[type="submit"],
+.boton-cerrar,
+.boton-volver {
+    display: inline-block;
+    width: 100%;
+    padding: 14px;
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+button[type="submit"]:hover,
+.boton-cerrar:hover,
+.boton-volver:hover {
+    background: #5f4dd1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.3);
+}
+
+/* ========== 8. MENSAJES ========== */
+.mensaje-error {
+    background: #ffe5e5;
+    color: var(--color-error);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: var(--espaciado-medio);
+    border-left: 4px solid var(--color-error);
+}
+
+/* ========== 9. PÁGINA DE BIENVENIDA ========== */
+.info-sesion {
+    background: var(--color-fondo);
+    padding: var(--espaciado-medio);
+    border-radius: 8px;
+    margin: var(--espaciado-medio) 0;
+}
+
+.mensaje-especial {
+    color: var(--color-primario);
+    font-weight: 500;
+    margin-top: var(--espaciado-pequeno);
+}
+
+/* ========== 10. PÁGINA DE PERMISOS ========== */
+.icono-error {
+    font-size: 64px;
+    text-align: center;
+    margin-bottom: var(--espaciado-medio);
+}
+
+.caja-permisos {
+    text-align: center;
+}
+
+.caja-permisos h1 {
+    color: var(--color-error);
+}
+
+.caja-permisos p {
+    margin-bottom: var(--espaciado-medio);
+}
